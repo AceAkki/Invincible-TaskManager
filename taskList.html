@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invincible - Task Manager, LocalStorage Support </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+    <meta name="color-scheme" content="light" />
+    <link rel="stylesheet" href="light-root.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+
+<body class="bg">
+
+    <header>
+        <div class="header-wrap">
+            <div class="icon-wrap">
+                <div class="icon" id="allTasks" tabindex="0">
+                    <i class="ph ph-queue"></i>
+                    <!-- All Tasks -->
+                </div>
+                <div class="icon" id="priorityBtn" tabindex="1">
+                    <i class="ph ph-list-star"></i>
+                    <!-- Priority -->
+                </div>
+                <div class="icon" id="completedBtn" tabindex="2">
+                    <i class="ph ph-list-checks"></i>
+                    <!-- Completed  -->
+                </div>
+
+                <div class="icon" id="SaveAll" tabindex="3">
+                    <i class="ph ph-floppy-disk"></i>
+                </div>
+            </div>
+
+            <div class="actions-wrap">
+                <div class="search-wrap">
+                    <div>
+                        <input type="text" id="search-input"  name="Search Task" placeholder="Search Task" tabindex="4">
+
+                    </div>
+                    <!-- <i id="search-btn" class="ph ph-magnifying-glass">  </i> -->
+                    <i id="search-btn" class="ph ph-eraser" tabindex="5">  </i>
+                </div>
+                <div class="divider"></div>
+                <div class="clear-wrap">
+                    <i id="clearTask" class="ph ph-nuclear-plant" tabindex="6"> </i>
+                </div>
+                <div class="screen-wrap">
+                    <i id="screenMode" class="ph ph-sun-dim"> </i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="main-container-grid">
+            <div class="container span-row" id="current-section">
+                <div class="sortWrap">
+                    <div>
+                        <i class="ph ph-dots-three" tabindex="9"></i>
+                    </div>
+                </div>
+                <div class="title">
+                    Current Tasks
+                </div>
+                <div class="inputWrap">
+                    <div class="input-grid">
+                        <input type="text" id="inputTasks" placeholder="# Add Tag | Add Task" tabindex="7">
+                    </div>
+                    <div class="btn-grid">
+                        <button id="addTask" tabindex="8">Add Task</button>
+                    </div>
+                </div>
+
+
+                <div class="outputWrap">
+                </div>
+
+            </div>
+
+            <div class="container span-row" id="priority-section">
+                <div class="sortWrap">
+                    <div>
+                        <i class="ph ph-dots-three" tabindex="10"></i>
+                    </div>
+                </div>
+                <div class="title">
+                    Priority Tasks
+                </div>
+
+                <div class="outputWrap">
+                </div>
+
+            </div>
+
+            <div class="container" id="complete-section">
+                <div class="sortWrap">
+                    <div>
+                        <i class="ph ph-dots-three" tabindex="11"></i>
+                    </div>
+                </div>
+                <div class="title">
+                    Completed Tasks
+                </div>
+
+                <div class="outputWrap">
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="tag-wrap">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-icon">
+        <div class="icon" id="newTask">
+            <i class="ph ph-plus-circle"></i>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+
+    <script src="tasklist.js"></script>
+</body>
+
+</html>

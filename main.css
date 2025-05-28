@@ -1,42 +1,4 @@
-:root {
-  /* Backgrounds */
-  --bg-main: #a8bbb0; /* Soft off-white with warmth */
-  --clr-light: #fffdf5; /* Gentle cream */
 
-  /* Text */
-  --text-primary: #3a3a3c; /* Muted charcoal */
-  --text-secondary: #a0a0a2; /* Calm gray */
-  --text-dark: #050505;
-
-  --clr-primary: #b1d4e0;
-  --clr-primary-light: #d0ebff;
-  --clr-secondary: #e5dbff;
-  --clr-tertiary: #d3f9d8;
-
-  /* Accents (Playful pastels) */
-  --accent-primary: #74c0fc;
-  --accent-primary-light: #a5d8ff; /* Light sky blue */
-  --accent-secondary: #ffc6ff; /* Soft lavender pink */
-  --accent-tertiary: #b5ead7; /* Pale turquoise green */
-
-  /* Status Colors (Soothing pastels) */
-  --status-todo: #ffd6a5; /* Peachy pastel */
-  --status-completed: #caffbf; /* Minty green */
-  --status-priority: #e0c3fc;
-
-  --status-alert: #ffadad; /* Gentle coral red */
-
-  --gray-light: #f5f5f5;
-  --gray-medium: #cfcfcf;
-  --gray-dark: #7d7d7d;
-
-  /* UI Elements */
-  --border-color: #ededed; /* Very light gray */
-  --input-dark: #ffec99; /* Warm butter yellow */
-  --input-light: #fdffb6; /* Soft lemon */
-  --checkbox-unchecked: #dadada;
-  --checkbox-checked: #a5d8ff;
-}
 
 * {
   margin: 0;
@@ -150,7 +112,7 @@ button {
 .header-wrap .icon#SaveAll i {
   background: var(--clr-tertiary);
   border: 2px solid var(--gray-dark);
-  color: var(--text-primary);
+  color: var(--text-dark);
   padding: 0.4rem;
 }
 
@@ -161,7 +123,6 @@ button {
 .search-wrap #search-input {
   background: var(--clr-light);
 }
-
 
 .search-wrap ol {
   position: absolute;
@@ -209,6 +170,16 @@ button {
   font-weight: 900;
   font-size: 1.2rem;
 }
+
+#screenMode {
+  background: var(--input-dark);
+  color: var(--text-dark);
+  border: 2px solid var(--gray-dark);
+  border-radius: 100%;
+  padding: 10px;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
 /* header end */
 
 /* containers */
@@ -233,7 +204,7 @@ button {
   border: 1px solid rgba(39, 39, 39, 0.3);
   min-height: 33vh;
   max-height: 30vh;
-  color: var(--text-primary);
+  color: var(--text-dark);
 }
 
 .container:last-child {
@@ -351,7 +322,7 @@ button {
   padding: 10px;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--text-primary);
+  color: var(--text-dark);
 }
 
 .task .opt-btn-wrap {
@@ -431,7 +402,7 @@ button {
 }
 
 .title {
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 1.5rem;
 }
 .notify-wrap {
@@ -491,7 +462,7 @@ button {
   max-width: 70vw;
 
   padding: 1rem;
-
+  color: var(--text-dark);
   background: rgba(255, 255, 255, 0.79);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -510,7 +481,7 @@ button {
   font-size: 2em;
   font-weight: normal;
   padding: 0 0 0.5rem;
-  border-bottom: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--text-dark);
 }
 .task-wrap .task-type {
   font-size: 1.3em;
@@ -526,7 +497,7 @@ button {
 .task-wrap input.task-desc {
   margin: 1rem 0;
   background: none;
-  color: var(--text-primary);
+  color: var(--text-dark);
   border: none;
   border-radius: none;
   padding: 10px;
@@ -641,7 +612,7 @@ button {
   backdrop-filter: blur(7.2px);
   -webkit-backdrop-filter: blur(7.2px);
   border: 2px solid rgba(196, 196, 196, 0.7);
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 45px;
   border-radius: 100%;
   padding: 5%;
@@ -729,7 +700,7 @@ button {
     font-size: 1.5em;
   }
   .task-wrap .task-date {
-    font-size:1.5em;
+    font-size: 1.5em;
   }
 
   .info-wrap {
