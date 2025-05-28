@@ -47,7 +47,6 @@ A lightweight, responsive **Task Manager** web app with **local storage** suppor
 ## 📸 Preview
 
 ![Task Manager UI Screenshot](preview-image.png)  
-*Replace with actual screenshot or GIF preview of your app.*
 
 ---
 
