@@ -14,13 +14,13 @@ A lightweight, responsive **Task Manager** web app with **local storage** suppor
 - ➕ **Add Tasks Quickly**
   - Simple input interface
   - Hovering "Add Task" button for quick task entry
-  - Option to **add tags** to tasks
+  - **add tags** to tasks
   - Automatically records the **date added**
 
 - ✏️ **Task Management**
   - **Edit** task name, tags, and date
   - **Delete** individual tasks
-  - **Drag or move** tasks between sections freely
+  - **Move** tasks between sections freely
 
 - 🔁 **Task Sorting**
   - Sort by **name**, **tag**, or **date** within each section
@@ -38,23 +38,11 @@ A lightweight, responsive **Task Manager** web app with **local storage** suppor
 
 - 📦 **Bento Grid UI**
   - Modular, responsive layout
-  - Tags and **task count badges** displayed per section
+  - Tags and **task count badges** displayed for all sections
   - Optimized for desktop and mobile devices
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/task-manager.git
-cd task-manager
-
-
-### 2. Open `index.html` in your browser  
-No additional dependencies required – works out of the box.
-
----
 
 ## 📸 Preview
 
@@ -81,7 +69,6 @@ All tasks are stored in the browser’s **local storage** and remain until:
 
 ## 📌 TODO / Future Enhancements
 
-- Add category-based color coding
 - Add due dates and reminders
 - Sync with cloud or export to file
 
