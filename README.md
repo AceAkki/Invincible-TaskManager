@@ -1,6 +1,6 @@
-# 📝 Task Manager
+# 📝 Invincible - Task Manager
 
-A lightweight, responsive **Task Manager** web app with **local storage** support and an intuitive **bento grid** layout. Organize your tasks efficiently across **Current**, **Priority**, and **Completed** sections — all with a beautiful UI, smooth interactions, and flexible features.
+A lightweight, responsive **Invincible -Task Manager** web app with **local storage** support and an intuitive **bento grid** layout. Organize your tasks efficiently across **Current**, **Priority**, and **Completed** sections — all with a beautiful UI, smooth interactions, and flexible features.
 
 ---
 
