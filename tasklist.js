@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+
+    
     // to highlight or scroll to task list
     highlightElem(element) {
       if (m1024.matches) {
