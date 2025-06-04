@@ -46,7 +46,8 @@ A lightweight, responsive **Invincible -Task Manager** web app with **local stor
 
 ## 📸 Preview
 
-![Task Manager UI Screenshot](preview-image.png,preview-image-0.png)  
+![Task Manager UI Screenshot](preview-image.png)
+![Task Manager UI Screenshot](preview-image-0.png)  
 
 ---
 
