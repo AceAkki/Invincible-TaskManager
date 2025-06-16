@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Invincible - Task Manager, LocalStorage Support </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,8 @@
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
 
     <meta name="color-scheme" content="light" />
-    <link rel="stylesheet" href="light-root.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/light-root.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 
@@ -26,20 +26,20 @@
     <header>
         <div class="header-wrap">
             <div class="icon-wrap">
-                <div class="icon" id="allTasks" tabindex="0">
+                <div class="icon" id="allTasks">
                     <i class="ph ph-queue"></i>
                     <!-- All Tasks -->
                 </div>
-                <div class="icon" id="priorityBtn" tabindex="1">
+                <div class="icon" id="priorityBtn">
                     <i class="ph ph-list-star"></i>
                     <!-- Priority -->
                 </div>
-                <div class="icon" id="completedBtn" tabindex="2">
+                <div class="icon" id="completedBtn">
                     <i class="ph ph-list-checks"></i>
                     <!-- Completed  -->
                 </div>
 
-                <div class="icon" id="SaveAll" tabindex="3">
+                <div class="icon" id="SaveAll">
                     <i class="ph ph-floppy-disk"></i>
                 </div>
             </div>
@@ -47,18 +47,32 @@
             <div class="actions-wrap">
                 <div class="search-wrap">
                     <div>
-                        <input type="text" id="search-input"  name="Search Task" placeholder="Search Task" tabindex="4">
+                        <input type="text" id="search-input" name="Search Task" placeholder="Search Task">
 
                     </div>
                     <!-- <i id="search-btn" class="ph ph-magnifying-glass">  </i> -->
-                    <i id="search-btn" class="ph ph-eraser" tabindex="5">  </i>
+                    <i id="search-btn" class="ph ph-eraser"> </i>
                 </div>
-                <div class="divider"></div>
-                <div class="clear-wrap">
-                    <i id="clearTask" class="ph ph-nuclear-plant" tabindex="6"> </i>
-                </div>
-                <div class="screen-wrap">
-                    <i id="screenMode" class="ph ph-sun-dim"> </i>
+
+                <div class="toggle-menu" >
+                    <div>
+                        <i class="ph ph-list" id="menu-button"></i>
+                        <ul class="menu-options">
+                            
+                        </ul>
+                        <!-- <ul class="menu-options hidden">
+                            <li>
+                                <div class="clear-wrap">
+                                    <i id="clearTask" class="ph ph-nuclear-plant"> </i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="screen-wrap">
+                                    <i id="screenMode" class="ph ph-sun-dim"> </i>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +135,7 @@
             </div>
             <div class="container">
                 <div class="tag-wrap">
-                    
+
                 </div>
             </div>
         </div>
@@ -134,9 +148,11 @@
     </div>
 
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
 
-    <script src="tasklist.js"></script>
+    <script type="module" src="js/tasklist.js"></script>
 </body>
 
 </html>
