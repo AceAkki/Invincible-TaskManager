@@ -1,22 +1,25 @@
-import {hightlightEvent} from "./highlightElems.js";
+import {highlightEvent} from "./highlightElems.js";
 import { tagClass, storageClass, tasksClass } from "./Main.js";
 import { miscFunction } from "./Misc.js";
 
 
 (function init () {
   // Objective: Create a to-do list application.
-  let inputTask = document.querySelector("#inputTasks");
-  let addBtn = document.querySelector("#addTask");
-  //let clearBtn = document.querySelector("#clearTask");
-  let saveBtn = document.querySelector("#SaveAll");
-  let searchInput = document.querySelector("#search-input");
-  let searchBtn = document.querySelector("#search-btn");
-  let optionsBtns = document.querySelectorAll(".sortWrap");
-
+  
   document.addEventListener("DOMContentLoaded", () => {
+    let inputTask = document.querySelector("#inputTasks");
+    let addBtn = document.querySelector("#addTask");
+    //let clearBtn = document.querySelector("#clearTask");
+    let saveBtn = document.querySelector("#SaveAll");
+    let searchInput = document.querySelector("#search-input");
+    let searchBtn = document.querySelector("#search-btn");
+    let optionsBtns = document.querySelectorAll(".sortWrap");
+
+    //-----------------------------------------------------------------
+
     // gets stored tasks
     storageClass.poppulateTasks();
-    // save storage - button
+
     storageClass.saveToStorage(saveBtn);
 
     // add task - elem, button
@@ -25,8 +28,9 @@ import { miscFunction } from "./Misc.js";
     tasksClass.optionsList(optionsBtns);
 
     tagClass.poppulateTags();
-    hightlightEvent.highlightTaskSections();
-    hightlightEvent.hightlightInput(inputTask);
+
+    highlightEvent.highlightTaskSections();
+    highlightEvent.highlightInput(inputTask);
 
     miscFunction.menuBtn(document.getElementById("menu-button"), document.querySelector(".menu-options")); 
     miscFunction.getInfo();
@@ -36,10 +40,7 @@ import { miscFunction } from "./Misc.js";
 
 })();
 
-
-
-
-// Search: Users should be able to search tasks 
+//ToDo:
 // Notifications/Reminders: Push notifications or in-app reminders to alert users of upcoming deadlines.
 
 // Dark/Light Mode: Offering both modes allows users to choose the experience that suits them.

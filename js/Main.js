@@ -392,7 +392,7 @@ class MainTasks {
     let optBtn = document.createElement("div");
     optBtn.classList.add("opt-btn-wrap");
     let optElem = document.createElement("i");
-    optElem.classList.add("ph", "ph-dots-three-circle-vertical");
+    optElem.classList.add("ph", "ph-dots-three-vertical");
     taskLI.appendChild(paraDiv);
     taskLI.appendChild(optDiv);
     paraDiv.appendChild(taskP);

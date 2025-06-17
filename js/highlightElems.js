@@ -31,7 +31,6 @@ class HighlightElems {
       animateBtn.animatePopup(element);    
     } else if (this.m360.matches) {
       // for small screen size we scroll to that element
-      // we get header's height and add 10 to it
       var headerOffset = document.querySelector(".header-wrap").getBoundingClientRect().height + 10;
       // element's position from top to viewport height
       var elementPosition = element.getBoundingClientRect().top;
@@ -45,7 +44,7 @@ class HighlightElems {
   }
 
   // to highlight input field
-  hightlightInput(element) {
+  highlightInput(element) {
     // select button and add event listener for click
     document.querySelector("#newTask").addEventListener("click", () => {
       // scroll to the element
@@ -58,25 +57,9 @@ class HighlightElems {
     });
   }
 
-  hightlightArray(array) {
-    array.forEach(elem => {
-      if (this.m1024.matches) {
-        // for large screen size we animate the element
-        animateBtn.animatePopup(element);     
-      } else if (this.m360.matches) {
-        // for small screen size we scroll to that element
-        // we get header's height and add 10 to it
-        var headerOffset = document.querySelector(".header-wrap").getBoundingClientRect().height + 10;
-        // element's position from top to viewport height
-        var elementPosition = elem.getBoundingClientRect().top;
-        // we get position by minusing element position from header height
-        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    })     
+  highlightArray(array) {
+    array.forEach(elem => { this.highlightElem(elem) })     
   }
+
 }
-export const hightlightEvent = new HighlightElems;
+export const highlightEvent = new HighlightElems;
