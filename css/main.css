@@ -359,13 +359,13 @@ button {
 }
 
 .outputWrap .task-para p {
-  padding: 10px;
-  font-size: 1rem;
+  padding: 0.5rem ;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-dark);
 }
 .outputWrap .task-para p:nth-child(2) {
-  padding: 10px;
+  padding: 0.3rem 0.5rem;
   font-size: 1rem;
   font-weight: 400;
   color: var(--text-dark);
@@ -387,7 +387,7 @@ button {
 }
 
 .outputWrap i {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .outputWrap .updateDiv {
