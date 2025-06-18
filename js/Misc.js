@@ -48,21 +48,13 @@ class Misc {
         'meta[name="color-scheme"]'
       ).content;
       if (colorScheme === "light") {
-        document
-          .querySelector('meta[name="color-scheme"]')
-          .setAttribute("content", "dark");
-        document
-          .querySelector('link[href="css/light-root.css"]')
-          .setAttribute("href", "css/dark-root.css");
+        document.querySelector('meta[name="color-scheme"]').setAttribute("content", "dark");
+        document.querySelector('link[href="css/light-root.css"]').setAttribute("href", "css/dark-root.css");
         button.classList.toggle("ph-sun-dim");
         button.classList.toggle("ph-moon-stars");
       } else {
-        document
-          .querySelector('meta[name="color-scheme"]')
-          .setAttribute("content", "light");
-        document
-          .querySelector('link[href="css/dark-root.css"]')
-          .setAttribute("href", "css/light-root.css");
+        document.querySelector('meta[name="color-scheme"]').setAttribute("content", "light");
+        document.querySelector('link[href="css/dark-root.css"]').setAttribute("href", "css/light-root.css");
         button.classList.toggle("ph-sun-dim");
         button.classList.toggle("ph-moon-stars");
       }
@@ -75,14 +67,14 @@ class Misc {
         let optionOne = document.createElement("li");
         optionOne.innerHTML = `
             <div class="clear-wrap">
-                <i id="clearTask" class="ph ph-nuclear-plant"> </i>
+                <i id="clearTask" class="ph ph-nuclear-plant" title="Clear All"> </i>
             </div>
             `;
 
         let optionTwo = document.createElement("li");
         optionTwo.innerHTML = `
             <div class="screen-wrap">
-                <i id="screenMode" class="ph ph-sun-dim"> </i>
+                <i id="screenMode" class="ph ph-sun-dim" title="Change Theme"> </i>
             </div>
             `;
 

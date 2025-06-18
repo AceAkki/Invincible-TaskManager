@@ -934,149 +934,68 @@ class MainTasks {
                 if (toggleBtn.flag(index)) {
                   // for loop that will run until taskList length
                   for (let index = 0; index < taskList.length; index++) {
-                    // selects all tasks
-                    taskList.forEach((taskElem) => {
-                      // taskelem - textcontent, splited, replaced unwanted part, trimmed white space and lowercase to compare
-                      let textDate = new Date(
-                        taskElem.querySelector(".task-date").textContent
-                      );
-                      let [mainMonth, mainDate] = [
-                        textDate.getMonth(),
-                        textDate.getDate(),
-                      ];
-                      // if previous exits
-                      if (taskElem.previousSibling) {
-                        let textPrev = new Date(
-                          taskElem.previousSibling.querySelector(
-                            ".task-date"
-                          ).textContent
-                        );
-                        let [month, date] = [
-                          textPrev.getMonth(),
-                          textPrev.getDate(),
-                        ];
-                        if (mainMonth > month) {
-                          taskElem.parentNode.insertBefore(
-                            taskElem,
-                            taskElem.previousSibling
-                          );
-                          if (mainMonth === month && mainDate < date) {
+                      // selects all tasks
+                      taskList.forEach((taskElem) => {
+                        // taskelem - textcontent, splited, replaced unwanted part, trimmed white space and lowercase to compare
+                        let textDate = new Date(taskElem.querySelector(".task-date").textContent);
+                        let [mainMonth, mainDate] = [textDate.getMonth(),textDate.getDate(),];
+                        // if previous exits
+                        if (taskElem.previousSibling) {
+                          let textPrev = new Date(taskElem.previousSibling.querySelector(".task-date").textContent);
+                          let [month, date] = [textPrev.getMonth(),textPrev.getDate(),];
+                          if (mainMonth > month) {
+                            taskElem.parentNode.insertBefore(taskElem,taskElem.previousSibling);
+                          }
+                          if (mainMonth === month && mainDate > date) {
                             // upon condition fulfillment = task elem is moved before previous elem
-                            taskElem.parentNode.insertBefore(
-                              taskElem,
-                              taskElem.previousSibling
-                            );
-                            console.log(
-                              mainMonth,
-                              month,
-                              mainDate,
-                              date,
-                              taskElem,
-                              taskElem.previousSibling
-                            );
+                            taskElem.parentNode.insertBefore(taskElem,taskElem.previousSibling);
                           }
                         }
-                      }
-                      // if next element exits
-                      if (taskElem.nextSibling) {
-                        let textNext = new Date(
-                          taskElem.nextSibling.querySelector(
-                            ".task-date"
-                          ).textContent
-                        );
-                        let [month, date] = [
-                          textNext.getMonth(),
-                          textNext.getDate(),
-                        ];
-
-                        if (mainMonth < month) {
-                          taskElem.parentNode.insertBefore(
-                            taskElem,
-                            taskElem.nextSibling
-                          );
-                          if (mainMonth === month && mainDate < date) {
-                            taskElem.parentNode.insertBefore(
-                              taskElem,
-                              taskElem.nextSibling
-                            );
+                        // if next element exits
+                        if (taskElem.nextSibling) {
+                          let textNext = new Date(taskElem.nextSibling.querySelector(".task-date").textContent);
+                          let [month, date] = [textNext.getMonth(),textNext.getDate(),];            
+                          if (mainMonth < month) {
+                            taskElem.parentNode.insertBefore(taskElem,taskElem.nextSibling);
+                          }
+                          if (mainMonth === month && mainDate > date) {
+                            taskElem.parentNode.insertBefore(taskElem,taskElem.nextSibling);
                           }
                         }
-                      }
-                    });
-                  }
+                      });
+                    }
                 } else {
                   for (let index = 0; index < taskList.length; index++) {
                     // selects all tasks
                     taskList.forEach((taskElem) => {
                       // taskelem - textcontent, splited, replaced unwanted part, trimmed white space and lowercase to compare
-                      let textDate = new Date(
-                        taskElem.querySelector(".task-date").textContent
-                      );
-                      let [mainMonth, mainDate] = [
-                        textDate.getMonth(),
-                        textDate.getDate(),
-                      ];
+                      let textDate = new Date(taskElem.querySelector(".task-date").textContent);
+                      let [mainMonth, mainDate] = [textDate.getMonth(),textDate.getDate(),];
                       // if previous exits
                       if (taskElem.previousSibling) {
-                        let textPrev = new Date(
-                          taskElem.previousSibling.querySelector(
-                            ".task-date"
-                          ).textContent
-                        );
-                        let [month, date] = [
-                          textPrev.getMonth(),
-                          textPrev.getDate(),
-                        ];
+                        let textPrev = new Date(taskElem.previousSibling.querySelector(".task-date").textContent);
+                        let [month, date] = [textPrev.getMonth(),textPrev.getDate(),];
                         if (mainMonth < month) {
-                          taskElem.parentNode.insertBefore(
-                            taskElem,
-                            taskElem.previousSibling
-                          );
-                          if (mainMonth === month && mainDate > date) {
-                            // upon condition fulfillment = task elem is moved before previous elem
-                            taskElem.parentNode.insertBefore(
-                              taskElem,
-                              taskElem.previousSibling
-                            );
-                            console.log(
-                              mainMonth,
-                              month,
-                              mainDate,
-                              date,
-                              taskElem,
-                              taskElem.previousSibling
-                            );
-                          }
+                          taskElem.parentNode.insertBefore(taskElem,taskElem.previousSibling);
+                        }
+                        if (mainMonth === month && mainDate < date) {
+                          taskElem.parentNode.insertBefore(taskElem,taskElem.previousSibling);
                         }
                       }
                       // if next element exits
                       if (taskElem.nextSibling) {
-                        let textNext = new Date(
-                          taskElem.nextSibling.querySelector(
-                            ".task-date"
-                          ).textContent
-                        );
-                        let [month, date] = [
-                          textNext.getMonth(),
-                          textNext.getDate(),
-                        ];
-
+                        let textNext = new Date(taskElem.nextSibling.querySelector(  ".task-date").textContent);
+                        let [month, date] = [textNext.getMonth(),textNext.getDate()];              
                         if (mainMonth > month) {
-                          taskElem.parentNode.insertBefore(
-                            taskElem,
-                            taskElem.nextSibling
-                          );
-                          if (mainMonth === month && mainDate > date) {
-                            taskElem.parentNode.insertBefore(
-                              taskElem,
-                              taskElem.nextSibling
-                            );
-                          }
+                          taskElem.parentNode.insertBefore(taskElem,taskElem.nextSibling);
+                        }
+                        if (mainMonth === month && mainDate < date) {
+                          taskElem.parentNode.insertBefore(taskElem,taskElem.nextSibling);
                         }
                       }
                     });
                   }
-                }
+                } 
               });
             }
           });
